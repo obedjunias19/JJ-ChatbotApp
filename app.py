@@ -11,12 +11,14 @@ def main():
     global counter
     st.set_page_config(
         page_title="Jolly Junias - Feel Good Chatbot",
-        page_icon="❤️",
+        page_icon="J❤️J",
         layout="wide",
         initial_sidebar_state="expanded",
     )
 
-    st.write("Please type something to start the conversation.")
+    st.title("Jolly Junias - Feel Good Chatbot 😊")
+    st.sidebar.image("hhttps://cdn.pixabay.com/photo/2023/02/05/20/01/ai-generated-7770474_960_720.png", use_container_width=True)
+    st.write("Don't Wait!!! Just start typing to start the conversation.")
 
     counter += 1
     user_input = st.text_input("You:", key=f"user_input_{counter}")
