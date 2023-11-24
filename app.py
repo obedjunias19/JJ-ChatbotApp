@@ -10,6 +10,7 @@ intents = df.intents.values
 
 def main():
     global counter
+    assistant_response = ""
     
     st.set_page_config(
         page_title="Jolly Junias - Feel Good Chatbot",
@@ -29,6 +30,7 @@ def main():
         # Display user message in chat message container
         with st.chat_message("user"):
             st.markdown(prompt)
+        assistant_response = chatbot(prompt,intents)
         # Add user message to chat history
         st.session_state.messages.append({"role": "user", "content": prompt})
 
@@ -36,8 +38,7 @@ def main():
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
         full_response = ""
-        assistant_response = chatbot(prompt,intents)
-
+        
         if assistant_response.lower() in ['goodbye', 'bye']:
             assistant_response = "Thank you for chatting with me. Have a great day!"
         
