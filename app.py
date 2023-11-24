@@ -44,11 +44,11 @@ def main():
             assistant_response = "Thank you for chatting with me. Have a great day!"
         
         # # Simulate stream of response with milliseconds delay
-        # for chunk in assistant_response.split():
-        #     full_response += chunk + " "
-        #     time.sleep(0.05)
-        #     # Add a blinking cursor to simulate typing
-        #     message_placeholder.markdown(full_response + "▌")
+        for chunk in assistant_response.split():
+            full_response += chunk + " "
+            time.sleep(0.05)
+            # Add a blinking cursor to simulate typing
+            message_placeholder.markdown(full_response + "▌")
         message_placeholder.markdown(full_response)
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": full_response})
