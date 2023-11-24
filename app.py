@@ -18,7 +18,7 @@ def main():
     )
 
     with st.sidebar:
-        "[![View the Source Code](https://github.com/obedjunias19/JJ-ChatbotApp)"
+        "[View the Source Code](https://github.com/obedjunias19/JJ-ChatbotApp)"
     
     # st.error(f'{label} sentiment (score: {score})')
     st.title("Jolly Junias - Feel Good Chatbot 😊")
