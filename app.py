@@ -16,7 +16,7 @@ def main():
         layout="wide",
         initial_sidebar_state="expanded",
     )
-    st.write('To see my source code, have a look at my [GitHub repo](https://github.com/obedjunias19/JJ-ChatbotApp).')
+    st.write('For source code, have a look at my [GitHub Repository](https://github.com/obedjunias19/JJ-ChatbotApp)')
     # st.error(f'{label} sentiment (score: {score})')
     st.title("Jolly Junias - Feel Good Chatbot 😊")
 
@@ -32,7 +32,7 @@ def main():
             st.markdown(message["content"])
     
     # Accept user input
-    if prompt := st.chat_input("What is up?"):
+    if prompt := st.chat_input("Start Conversation with Jolly Junias..."):
         # Add user message to chat history
         st.session_state.messages.append({"role": "user", "content": prompt})
         # Display user message in chat message container
