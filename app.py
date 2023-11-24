@@ -16,8 +16,11 @@ def main():
         layout="wide",
         initial_sidebar_state="expanded",
     )
-    
+    st.write('To see my source code, have a look at my [GitHub repo](https://github.com/obedjunias19/JJ-ChatbotApp).')
+    # st.error(f'{label} sentiment (score: {score})')
     st.title("Jolly Junias - Feel Good Chatbot 😊")
+
+    
     
     # Initialize chat history
     if "messages" not in st.session_state:
