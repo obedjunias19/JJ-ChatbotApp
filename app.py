@@ -36,7 +36,7 @@ def main():
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
         full_response = ""
-        assistant_response = response = chatbot(prompt,intents)
+        assistant_response = chatbot(prompt,intents)
 
         if assistant_response.lower() in ['goodbye', 'bye']:
             assistant_response = "Thank you for chatting with me. Have a great day!"
