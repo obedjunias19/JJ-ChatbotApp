@@ -35,22 +35,22 @@ def main():
         st.session_state.messages.append({"role": "user", "content": prompt})
 
     # Display assistant response in chat message container
-    with st.chat_message("assistant"):
-        message_placeholder = st.empty()
-        full_response = ""
+    # with st.chat_message("assistant"):
+    #     message_placeholder = st.empty()
+    #     full_response = ""
         
-        if assistant_response.lower() in ['goodbye', 'bye']:
-            assistant_response = "Thank you for chatting with me. Have a great day!"
+    #     if assistant_response.lower() in ['goodbye', 'bye']:
+    #         assistant_response = "Thank you for chatting with me. Have a great day!"
         
-        # Simulate stream of response with milliseconds delay
-        for chunk in assistant_response.split():
-            full_response += chunk + " "
-            time.sleep(0.05)
-            # Add a blinking cursor to simulate typing
-            message_placeholder.markdown(full_response + "▌")
-        message_placeholder.markdown(full_response)
-    # Add assistant response to chat history
-    st.session_state.messages.append({"role": "assistant", "content": full_response})
+    #     # Simulate stream of response with milliseconds delay
+    #     for chunk in assistant_response.split():
+    #         full_response += chunk + " "
+    #         time.sleep(0.05)
+    #         # Add a blinking cursor to simulate typing
+    #         message_placeholder.markdown(full_response + "▌")
+    #     message_placeholder.markdown(full_response)
+    # # Add assistant response to chat history
+    # st.session_state.messages.append({"role": "assistant", "content": full_response})
     
    
     # st.sidebar.image("hhttps://cdn.pixabay.com/photo/2023/02/05/20/01/ai-generated-7770474_960_720.png", use_container_width=True)
