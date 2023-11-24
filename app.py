@@ -16,7 +16,9 @@ def main():
         layout="wide",
         initial_sidebar_state="expanded",
     )
-    st.write('For source code, have a look at my [GitHub Repository](https://github.com/obedjunias19/JJ-ChatbotApp)')
+
+    with st.sidebar:
+        st.text('[![Open in GitHub](https://github.com/codespaces/badge.svg)](https://github.com/obedjunias19/JJ-ChatbotApp)')
     # st.error(f'{label} sentiment (score: {score})')
     st.title("Jolly Junias - Feel Good Chatbot 😊")
 
