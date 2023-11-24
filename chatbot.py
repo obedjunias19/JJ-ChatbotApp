@@ -1,5 +1,6 @@
 import joblib
 import pandas as pd
+import numpy as np
 
 
 
@@ -10,5 +11,5 @@ def chatbot(input_text,intents):
     for intent in intents:
         if intent['tag'] == tag:
             print(tag)
-            response = random.choice(intent['responses'])
+            response = np.random.choice(intent['responses'])
             return response
