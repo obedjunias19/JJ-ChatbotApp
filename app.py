@@ -29,31 +29,22 @@ def main():
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
-
+    
     # Accept user input
     if prompt := st.chat_input("What is up?"):
-
         # Add user message to chat history
         st.session_state.messages.append({"role": "user", "content": prompt})
-    
         # Display user message in chat message container
         with st.chat_message("user"):
             st.markdown(prompt)
-            
-        assistant_response = chatbot(prompt,intents)
-        # print(assistant_response)
-        # Add user message to chat history
-        st.session_state.messages.append({"role": "user", "content": prompt})
-
+    
         # Display assistant response in chat message container
         with st.chat_message("assistant"):
             message_placeholder = st.empty()
             full_response = ""
+            assistant_response = chatbot(prompt,intents)
             
-            if assistant_response.lower() in ['goodbye', 'bye']:
-                assistant_response = "Thank you for chatting with me. Have a great day!"
-            
-            # # Simulate stream of response with milliseconds delay
+            # Simulate stream of response with milliseconds delay
             for chunk in assistant_response.split():
                 full_response += chunk + " "
                 time.sleep(0.05)
