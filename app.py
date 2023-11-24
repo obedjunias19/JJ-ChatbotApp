@@ -9,6 +9,14 @@ df = pd.read_json('./chatbot-intents.json')
 intents = df.intents.values
 
 def main():
+    
+    st.set_page_config(
+        page_title="Jolly Junias - Feel Good Chatbot",
+        page_icon="J❤️J",
+        layout="wide",
+        initial_sidebar_state="expanded",
+    )
+    
     st.title("Jolly Junias - Feel Good Chatbot 😊")
     
     # Initialize chat history
