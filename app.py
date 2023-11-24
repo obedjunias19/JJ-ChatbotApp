@@ -18,7 +18,7 @@ def main():
     )
 
     with st.sidebar:
-        st.text('[![Open in GitHub](https://github.com/codespaces/badge.svg)](https://github.com/obedjunias19/JJ-ChatbotApp)')
+        st.text_input('[![Open in GitHub](https://github.com/codespaces/badge.svg)](https://github.com/obedjunias19/JJ-ChatbotApp)')
     # st.error(f'{label} sentiment (score: {score})')
     st.title("Jolly Junias - Feel Good Chatbot 😊")
 
